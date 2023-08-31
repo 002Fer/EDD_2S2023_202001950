@@ -10,7 +10,7 @@
 #include <sstream>
 #include <stdlib.h>
 #include <fstream>
-#include <nlohmann/json.hpp>
+
 using namespace std;
 string inicio(string usuario, string password);
 void menu();
@@ -230,9 +230,6 @@ int main()
                 cout<<"Id generado:  "<<codigo;
             }
             cout<<"proyectos creados: "<<endl;
-            cola.VerProyectos();
-
-            Tarea->Asignar(codigo,nombre_Tar,vista)
 
         }
         else if(op=="4"){
@@ -255,37 +252,7 @@ int main()
                 cout<<"se creo la imagen";
             }
             else if(reportes=="3"){
-
-                json datos;
-
-
-                datos["nombre"] = "John Doe";
-                datos["edad"] = 30;
-
-
-                json ciudades;
-                ciudades.push_back("Ciudad 1");
-                ciudades.push_back("Ciudad 2");
-                ciudades.push_back("Ciudad 3");
-
-                datos["ciudades"] = ciudades;
-                datos["casado"] = false;
-
-                // Crear un archivo JSON
-                std::ofstream archivo("reporte.json");
-
-                if (archivo.is_open()) {
-
-                    archivo << datos.dump(4);
-
-
-                    archivo.close();
-
-                    std::cout << "Archivo JSON creado exitosamente." << std::endl;
-                } else {
-                    std::cerr << "Error al abrir el archivo JSON." << std::endl;
-                }
-                cout<<"se creo el archivo";
+            cout<<"se creo reporte";
             }
 
             }
